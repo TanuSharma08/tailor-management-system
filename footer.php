@@ -1,2 +1,15 @@
-<style>footer {color: rgba(48,48,48,0.85);text-align: center;padding: 20px 0px;font-size: 14px;font-family: Arial, Helvetica, sans-serif;}strong:hover{color: rgba(26, 72, 141, 0.84);cursor: pointer;}</style>
+<style>
+    footer {
+        color: rgba(48, 48, 48, 0.85);
+        text-align: center;
+        padding: 20px 0px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    strong:hover {
+        color: rgba(26, 72, 141, 0.84);
+        cursor: pointer;
+    }
+</style>
 <footer>&copy; 2025 Drashti Tailor | Designed & Developed by <strong>Tanu Sharma</strong></footer>

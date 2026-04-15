@@ -1,36 +1,31 @@
 <?php
-goto jPj_H;
-tnUqe:
-if ($_SERVER["\122\x45\121\125\105\x53\124\137\115\105\x54\110\117\x44"] === "\120\117\123\x54" && isset($_POST["\x64\145\x6c\145\x74\x65\137\x69\x64\x73"])) {
-    $ids = array_map("\151\156\x74\x76\x61\154", explode("\x2c", $_POST["\x64\145\x6c\145\164\145\137\151\144\x73"]));
-    $idList = implode("\54", $ids);
+$conn = new mysqli("localhost", "root", "", "tailor_db");
+header('Content-Type: application/json');
+
+if ($conn->connect_error) {
+    echo json_encode(['success'=>false, 'error'=>'DB connection failed']);
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_ids'])) {
+    $ids = array_map('intval', explode(",", $_POST['delete_ids']));
+    $idList = implode(",", $ids);
+
     if (!empty($idList)) {
-        $sql = "\x44\105\114\105\x54\105\x20\x46\122\x4f\x4d\x20\x6d\145\x61\x73\165\x72\145\155\145\156\164\x73\x20\127\110\x45\122\105\x20\x69\x64\40\111\x4e\x20\x28{$idList}\x29";
+        $sql = "DELETE FROM measurements WHERE id IN ($idList)";
         if ($conn->query($sql) === TRUE) {
-            echo json_encode(array("\163\x75\143\143\x65\163\x73" => true, "\x64\x65\x6c\145\x74\x65\144\x49\144\x73" => $ids));
+            echo json_encode([
+                'success'=>true,
+                'deletedIds'=>$ids
+            ]);
         } else {
-            echo json_encode(array("\x73\x75\143\x63\x65\163\163" => false, "\x65\162\162\157\162" => "\x45\x72\162\157\162\40\x64\x65\154\x65\x74\151\156\147\40\x72\145\x63\x6f\x72\144\x73"));
+            echo json_encode(['success'=>false, 'error'=>'Error deleting records']);
         }
     } else {
-        echo json_encode(array("\163\x75\143\143\145\163\x73" => false, "\145\162\x72\157\162" => "\x49\x6e\x76\141\154\x69\x64\40\162\145\161\165\x65\163\x74"));
+        echo json_encode(['success'=>false, 'error'=>'Invalid request']);
     }
 } else {
-    echo json_encode(array("\x73\x75\x63\143\145\x73\163" => false, "\x65\x72\162\157\x72" => "\x49\x6e\166\141\154\x69\x64\40\x72\145\161\x75\145\163\x74"));
+    echo json_encode(['success'=>false, 'error'=>'Invalid request']);
 }
-goto NiMD0;
-gmpAB:
-if ($conn->connect_error) {
-    echo json_encode(array("\163\x75\143\143\145\163\x73" => false, "\145\162\162\157\162" => "\104\x42\40\143\x6f\156\x6e\x65\x63\x74\x69\157\156\x20\146\141\x69\154\x65\144"));
-    die;
-}
-goto tnUqe;
-jPj_H:
-$conn = new mysqli("\154\x6f\x63\141\x6c\x68\157\x73\164", "\162\x6f\157\164", '', "\164\141\x69\x6c\x6f\162\x5f\144\142");
-goto Iuzp5;
-Iuzp5:
-header("\103\157\x6e\x74\x65\x6e\x74\55\124\x79\x70\145\x3a\40\x61\160\160\154\151\143\141\164\151\157\156\57\x6a\163\x6f\x6e");
-goto gmpAB;
-NiMD0:
 $conn->close();
-goto W03r9;
-W03r9:
+?>
