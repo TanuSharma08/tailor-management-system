@@ -1,0 +1,32 @@
+body {font-family: Arial, sans-serif;margin: 0;background-color: #f9f9f9;color: #0945a0;}
+h1 {font-size: 28px;text-align: center;margin: 10px 0 25px 0;color: rgba(12, 104, 158, 0.74);font-weight: 600;}
+form>div {margin-bottom: 18px;}
+label {font-weight: 500;font-size: 17px;margin-bottom: 6px;color: #222;display: block;}
+input[type="text"],input[type="date"],select,textarea{padding: 10px;border: 1px solid #ccc;border-radius: 5px;font-size: 14px;width: 100%;box-sizing: border-box;transition: all 0.2s ease-in-out;}
+input[type="text"]:focus,input[type="date"]:focus,select:focus,textarea:focus,.custom-select.focus {outline: none;background-color: #ffffff;border-color: rgba(50, 46, 252, 0.35);box-shadow: 0 0 0 0.2rem rgba(14, 66, 109, 0.25);}
+.field-group {display: flex;flex-direction: column;}
+.cloth-fields {display: none;margin-bottom: 20px;}
+.cloth-fields.active {display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 15px;}
+.cloth-fields h3 {margin: 15px 0 10px 0;font-size: 20px;font-weight: bold;color: #000;grid-column: 1 / -1;display: block;}
+button {background-color: #007BFF;color: white;padding: 12px 30px;font-size: 16px;border: none;border-radius: 6px;cursor: pointer;display: block;margin: 25px auto 0 auto;transition: background-color 0.2s ease-in-out;}
+button:hover {background-color: #4191e7;}
+.form-buttons {display: flex;gap: 15px;margin-top: 20px;}
+.form-actions {display: flex;justify-content: center;gap: 8px;margin-top: 30px;margin-bottom: 10px;}
+.form-actions button {margin: 0 5px;}
+.form-row {display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 15px;}
+textarea {resize: vertical;}
+.custom-select {width: 100%;border: 1px solid #ccc;border-radius: 5px;padding: 10px;background-color: #fff;cursor: pointer;position: relative;user-select: none;font-size: 14px;color: #000;box-sizing: border-box;transition: border-color 0.2s;}
+.custom-select .selected-text {display: block;color: #000;}
+.custom-select .options {display: none;position: absolute;top: 100%;left: 0;width: 100%;border: 1px solid #ccc;background: #fff;z-index: 1000;max-height: 200px;overflow-y: auto;box-sizing: border-box;border-radius: 0 0 5px 5px;}
+.custom-select .options.show {display: block;}
+.custom-select .option {padding: 8px 10px;display: flex;align-items: center;gap: 6px;color: #000;transition: background 0.2s;}
+.custom-select .option:hover {background: #f1f1f1;}
+.custom-select {position: relative;padding-right: 35px;appearance: none;-webkit-appearance: none;-moz-appearance: none;}
+.custom-select::after {content: "";position: absolute;right: 12px;top: 50%;width: 0;height: 0;pointer-events: none;border-left: 6px solid transparent;border-right: 6px solid transparent;border-top: 6px solid #555;transform: translateY(-50%);}
+.dynamic-date {grid-column: 1 / -1;margin-top: 12px;}
+.remarks-block {grid-column: 1 / -1;margin-bottom:0px;}
+.cloth-fields.active.one-field {grid-template-columns: 1fr;}
+.custom-select .options label {display: flex;align-items: center;gap: 6px;padding: 5px 8px;cursor: pointer;font-size: 14px;color: #000;transition: background 0.2s;margin-bottom: 0px;}
+@media (max-width: 768px) {html, body {display: none !important;height: 0 !important;overflow: hidden !important;}}
+#totalAmount{width: 320px;}
+form {max-width: 1000px;margin: auto;padding: 25px;background-color: #e0e0fd;box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);border-radius: 8px;margin-top: 30px;margin-bottom: 13px;background-image: radial-gradient(circle, rgba(145, 40, 40, 0.15) 10%, transparent 10%),radial-gradient(circle, rgba(83, 39, 153, 0.15) 10%, transparent 10%);background-size: 40px 40px;background-position: 0 0, 20px 20px;}

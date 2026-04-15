@@ -1,0 +1,176 @@
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f5f6fa;color: #333;margin: 0;}
+.count-display {font-size: 16px;font-weight: 600;margin-bottom: 18px;color: #444;}
+h3 {margin-top: 15px;text-align: center;font-size: 25px;color: #222;font-weight: 600;}
+.filter-row {gap: 15px 20px;margin-bottom: 20px;}
+.filter-row label {font-weight: 500;min-width: 140px;}
+.filter-row input[type="text"],.filter-row select,.filter-row input[type="date"] {padding: 8px 12px;border-radius: 6px;border: 1px solid #ccc;font-size: 14px;background: #fff;margin-right: 10px;}
+.filter-row input[type="text"] {width: 220px;}
+.filter-row input[type="date"] {flex: 1;min-width: 140px; }
+.button-group {display: flex;gap: 12px;margin-top: 15px;flex-wrap: wrap;}
+button {padding: 8px 18px;border-radius: 6px;border: none;cursor: pointer;font-weight: 500;transition: 0.2s ease;}
+#clearBtn {background-color: #f1c40f;color: #fff;}
+#clearBtn:hover {background-color: #d4ac0d;}
+#editBtn {background-color: #3498db;color: #fff;}
+#editBtn:hover {background-color: #2980b9;}
+#deleteBtn {background: #fd2b40;border: 1px;}
+#deleteBtn:hover {background-color: #f12020;}
+#shareBtn {background-color: #25c04cff;}
+#shareBtn:hover {background-color: rgb(32, 167, 66);}
+#backupBtn {background-color: rgba(0, 128, 128, 0.856);}
+#backupBtn:hover {background-color: teal;}
+#printBtn {background-color: #00BCD4;}
+#printBtn:hover {background-color: #07a9be;}
+.close-btn {position: absolute;top: 0px;right: 12px;font-size: 28px;font-weight: bold;color: #333;cursor: pointer;}
+.popup-content {position: relative;}
+input[type="text"]:focus,input[type="date"]:focus,select:focus {outline: none;background-color: #ffffff;border-color: rgba(50, 46, 252, 0.35);box-shadow: 0 0 0 0.2rem rgba(14, 66, 109, 0.25);}
+#recordCount {font-weight: bold;margin-bottom: 15px;padding-left: 10px;}
+table {width: 100%;border-collapse: collapse;background-color: #fff;box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);border-radius: 8px;overflow: hidden;margin-bottom: 20px;}
+#tableContainer {width: 100%;overflow-x: auto;}
+#tableContainer table {min-width: 900px;border-collapse: collapse;background-color: #fff;box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);border-radius: 8px;margin-bottom: 20px;}
+th,td {padding: 12px 14px;text-align: left;border-bottom: 1px solid #eee;font-size: 14px;}
+th {background-color: #f7f7f7;font-weight: 600;}
+tr:nth-child(even) {background-color: #fafafa;}
+tr:hover {background-color: #f0f8ff;}
+.checkbox-col {width: 45px;text-align: center;}
+#popup-msg {font-size: 15px;font-weight: 500;padding: 12px 20px;border-radius: 6px;z-index: 10000;text-align: center;min-width: 220px;}
+.popup {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);justify-content: center;align-items: center;z-index: 9999;}
+.popup-content {background: #e0e0fd;padding: 0px 30px 25px 25px;border-radius: 10px;width: 520px;max-height: 90vh;overflow-y: auto;box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);}
+#editFormContainer {padding: 10px 5px;}
+.edit-top-row {display: grid;grid-template-columns: repeat(3, 1fr);gap: 15px;margin-bottom: 15px;}
+.edit-top-row input {width: 100%;padding: 8px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 14px;background: #fff;box-sizing: border-box;}
+.edit-multi {display: grid;grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));gap: 14px 18px;margin-bottom: 15px;}
+.edit-multi label {display: block;font-weight: 500;color: #353535;margin-bottom: 6px;}
+.edit-multi input {width: 100%;padding: 8px 2px;border: 1px solid #ccc;border-radius: 6px;font-size: 14px;}
+.edit-dates {display: grid;grid-template-columns: repeat(2, 1fr);gap: 14px;margin-bottom: 15px;}
+.edit-dates label {font-weight: 500;color: #353535;margin-bottom: 6px;display: block;}
+.edit-dates input {width: 100%;padding: 8px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 14px;background: #fff;box-sizing: border-box;}
+.edit-grid textarea {width: 100%;padding: 8px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 14px;background: #fff;box-sizing: border-box;resize: vertical;}
+#editForm button[type="submit"] {background-color: #3583dc;color: #fff;margin-right: 10px;padding: 8px 16px;border-radius: 6px;}
+#editForm button[type="submit"]:hover {background-color: #4191e7;}
+.edit-top-row label {display: block;font-weight: 500;margin-bottom: 6px;color: #353535;}
+.edit-top-row input,.edit-multi input,.edit-grid input,.edit-grid textarea,.filter-row input,.filter-row select {border: 1px solid #ccc !important;border-radius: 6px !important;padding: 8px 12px !important;background: #fff !important;}
+#editPopup input,#editPopup textarea,#editPopup select {border: 1px solid #ccc;border-radius: 6px;padding: 8px 12px;font-size: 14px;background: #fff;box-sizing: border-box;}
+input.flatpickr-input {width: 100%;padding: 8px 12px;border-radius: 5px;border: 1px solid #ccc;box-sizing: border-box;}
+#editPopup .flatpickr-input {width: 100%;padding: 8px 12px;border-radius: 6px;border: 1px solid #ccc;}
+.filter-row input,.filter-row select,.edit-top-row input,.edit-multi input,.edit-grid input,.edit-grid textarea,#editPopup input,#editPopup textarea,#editPopup select,input.flatpickr-input {padding: 8px 12px;border-radius: 6px;border: 1px solid #ccc;font-size: 14px;background: #fff;box-sizing: border-box;}
+input.flatpickr-input {width: 100%;padding: 8px 12px;border-radius: 5px;border: 1px solid #ccc;box-sizing: border-box;}
+#confirmPopup {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);justify-content: center;align-items: center;z-index: 10000;font-family: Arial, sans-serif;}
+#confirmPopup .popup-content {background: #fff;padding: 25px 30px;border-radius: 12px;width: 380px;max-width: 90%;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);text-align: center;}
+#confirmPopup p {margin: 0 0 28px 0;font-size: 17px;font-weight: 500;color: #333;line-height: 1.4;}
+#confirmPopup .popup-buttons {display: flex;justify-content: center;gap: 20px;}
+#confirmPopup button {flex: 1;padding: 10px 0;border: none;border-radius: 6px;font-size: 15px;font-weight: 500;cursor: pointer;transition: 0.2s;}
+#confirmYes,#confirmNo {background-color: #3583dc;color: #fff;}
+#confirmYes:hover,#confirmNo:hover {background-color: #4191e7;}
+.filter-row {display: flex;gap: 12px;flex-wrap: wrap;align-items: center;}
+.row-1 input[type="text"] {flex: 2;}
+.row-1 .date-filter {flex: 1;display: flex;gap: 6px;align-items: center;}
+.row-2>* {flex: 1;min-width: 120px;}
+.row-3 .button-group {display: flex;gap: 20px;width: 99%;}
+.row-3 .button-group button {flex: 1;padding: 8px;border: none;border-radius: 4px;font-size: 16px;color: #fff;cursor: pointer;}
+.filter-row label {min-width: unset;margin-right: 6px;font-weight: 500;display: inline-block;white-space: nowrap;}
+.filter-row input[type="text"],.filter-row input[type="date"],.filter-row select {flex: unset;width: auto;}
+.filter-row {gap: 15px;}
+.filter-item.wide {flex: 2;display: flex;flex-direction: column;gap: 5px;}
+.filter-item.narrow {flex: 1;display: flex;flex-direction: column;gap: 5px;}
+.filter-dates>div {display: flex;flex-direction: column;gap: 5px;}
+.to-date {display: none;}
+.filter-row {gap: 10px;align-items: flex-end;}
+.row-1 .search-item {flex: 2;}
+.row-1 .cloth-item {flex: 1.5;}
+.row-1 .from-date-item {flex: 1.5;}
+.row-2 .narrow {flex: 1;}
+.row-2 .to-date-item {flex: 1.3;}
+.filter-item input,.filter-item select {width: 100%;padding: 6px 8px;font-size: 14px;box-sizing: border-box;}
+#searchInput {margin-right: 0px;line-height: 1.28;}
+/* @media (max-width: 768px) {html, body {display: none !important;height: 0 !important;overflow: hidden !important;}} */
+.filter-card {display: flex;justify-content: space-between;align-items: flex-start; gap: 20px;background-color: #ffdba563; padding: 35px 35px 20px 35px;margin: 1px;margin-bottom: 25px;margin-top: 1px;}
+.filter-left {display: flex;flex-direction: column;flex: 1;}
+.filter-logo {display: flex;align-items: center;}
+.filter-logo img {max-height: 270px; width: 400px;object-fit: contain;opacity: 0.9;}
+/* === Mobile Stacked Filters === */
+@media (max-width: 768px),
+(max-width: 480px) {
+    .filter-card {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    /* Make each filter item take full width, stacked */
+    .filter-card .filter-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .filter-item {
+        flex: 1 1 48%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-row label {
+        margin-bottom: 4px;
+        /* label above input */
+        font-weight: 500;
+    }
+
+    .to-date {
+        display: flex;
+        /* flex if you want label above input */
+        flex-direction: column;
+        width: 100%;
+        /* full width for mobile */
+        gap: 5px;
+        /* spacing between label and input */
+    }
+
+    .row-1 {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .row-2 .to-date-item {
+        display: none !important;
+        /* force hide */
+    }
+}
+
+@media (max-width: 768px) {
+
+    #backupBtn,
+    #printBtn {
+        display: none !important;
+        /* force hide */
+    }
+}
+
+@media (max-width: 768px) {
+    .row-3 .button-group {
+        flex-wrap: wrap;
+        /* allow wrapping */
+        gap: 10px;
+        /* spacing between buttons */
+        margin-top: 5px;
+    }
+
+    .row-3 .button-group button {
+        flex: 0 0 calc(25% - 7.5px);
+        /* 4 buttons per row minus half of the gap */
+        min-width: 0;
+        /* prevent overflow */
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 768px) {
+  label{
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 0px !important;
+  }
+
+  .filter-row input[type="date"] {
+    width: 100% !important; /* stronger override */
+  }
+}
