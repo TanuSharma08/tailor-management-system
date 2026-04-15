@@ -80,7 +80,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="button-group"><button id="editBtn">Edit</button><button id="shareBtn">Share</button><button id="clearBtn">Clear</button><button id="deleteBtn" class="delete-btn">Delete</button><button id="backupBtn">Backup</button><button id="printBtn">Print</button></div>
             </div>
         </div>
-        <div class="filter-logo"><img src="1.png" alt="Logo"></div>
+        <div class="filter-logo"><img src="dashboard-img.png" alt="Logo"></div>
     </div>
     </div>
     <div id="recordCount" style="font-weight:bold;margin-bottom:10px;"></div>

@@ -86,7 +86,7 @@
 
 <body>
     <header class="site-header">
-        <div class="container"><a href="#" class="logo"><img src="m1.jpg" alt="Tailor Logo">Tailor Management System</a>
+        <div class="container"><a href="#" class="logo"><img src="header-logo.jpg" alt="Tailor Logo">Tailor Management System</a>
             <nav class="nav-menu"><a href="index.php">Home</a><a href="rec.php" title="View, Edit & Manage Customer Orders!">Measurements</a></nav>
         </div>
     </header>
