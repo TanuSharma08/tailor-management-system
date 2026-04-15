@@ -12,7 +12,7 @@
 - flatpickr for date picking
 
 ## Installation
-1. Import measurements.sql to MySQL
+1. Import tailor_db_schema.sql to MySQL
 2. Configure database connection
 3. Run on XAMPP/WAMP
 
