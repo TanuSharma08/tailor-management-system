@@ -12,4 +12,4 @@
         cursor: pointer;
     }
 </style>
-<footer>&copy; 2025 Drashti Tailor | Designed & Developed by <strong>Tanu Sharma</strong></footer>
+<footer>&copy; 2025 Tailor Management System | Designed & Developed by <strong>Tanu Sharma</strong></footer>
