@@ -233,7 +233,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Made with ❤️ by **Tanu Sharma**
 
 </div>
-=======
 # tailor-management-system
  comprehensive web-based management system for tailor shops.
 
