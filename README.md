@@ -208,6 +208,15 @@ http://localhost/tailor-management-system/index.php
 
 ---
 
+# 🚀 Upcoming Improvements
+
+- ✅ Mobile responsive design *(completed — update pending push)*
+- 🔍 Preview records before saving
+- ⚡ Enhancements to existing functionalities
+- 🎨 UI and user experience refinements
+
+---
+
 # 🤝 Contributing
 
 Suggestions and improvements are always welcome.
