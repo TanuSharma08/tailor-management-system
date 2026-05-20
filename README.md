@@ -57,6 +57,7 @@ The system includes bilingual labels and content support for improved accessibil
 Example:
 - Kurti / કુર્તિ
 - Shirt / શર્ટ
+- ChatGPT
 
 ---
 
